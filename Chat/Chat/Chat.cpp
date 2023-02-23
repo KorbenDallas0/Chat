@@ -167,7 +167,6 @@ void Chat::showMessage() const noexcept {
 }
 
 void Chat::deleteUser() noexcept {
-    std::cout << '\n' << _listOfUsers.size() << '\n';
     for (int i{ 0 }; i < _listOfUsers.size(); ++i) {
         if (_listOfUsers[i].getLogin() == _currentUser->getLogin()) {
             _listOfUsers.erase(_listOfUsers.begin() + i);
@@ -175,6 +174,4 @@ void Chat::deleteUser() noexcept {
             break;
         }
     }
-
-    std::cout << '\n' << _listOfUsers.size() << '\n';
 }
