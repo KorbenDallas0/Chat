@@ -1,6 +1,6 @@
 #include"Chat.hpp"
 
-void Chat::mainMenu() throw() {
+void Chat::mainMenu() {
 
     char operation;
 
@@ -38,7 +38,7 @@ void Chat::mainMenu() throw() {
     } while (!_currentUser && _chatGo);
 }
 
-void Chat::signUp() throw() {
+void Chat::signUp() {
     std::string login, password, name;
 
     std::cout << "Введите логин: ";
@@ -65,7 +65,7 @@ const bool& Chat::isLogin(const std::string& login) const noexcept {
     return false;
 }
 
-void Chat::authorization() throw() {
+void Chat::authorization() {
     std::string login, password;
 
     std::cout << "Введите логин: ";
@@ -96,7 +96,7 @@ const std::shared_ptr<User> Chat::getCurrentUser() const noexcept {
     return _currentUser;
 }
 
-void Chat::userMenu() noexcept {
+void Chat::userMenu() {
 
     char operation;
 
@@ -139,7 +139,7 @@ void Chat::userMenu() noexcept {
     } while (_currentUser);
 }
 
-void Chat::sendMessage() throw() {
+void Chat::sendMessage() {
     std::string to, text;
 
     std::cout << "Кому (логин или all) ";

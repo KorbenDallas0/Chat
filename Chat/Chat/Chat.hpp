@@ -7,8 +7,8 @@
 
 class Chat final {
 public:
-    void mainMenu() throw();
-    void userMenu() throw();
+    void mainMenu();
+    void userMenu();
 
     const bool& getChatGo() const noexcept;
     const std::shared_ptr<User> getCurrentUser() const noexcept;
@@ -18,13 +18,13 @@ private:
     std::shared_ptr<User> _currentUser{ nullptr };
     bool _chatGo{ true };
 
-    void signUp() throw();
+    void signUp();
     const bool& isLogin(const std::string& login) const noexcept;
-    void authorization() throw();
+    void authorization();
     const bool& isValidLoginPassword(const std::string& login, const std::string& password) noexcept;
     void deleteUser() noexcept;
 
-    void sendMessage() throw();
+    void sendMessage();
     void showMessage() const noexcept;
 
     void setMenuItems() const noexcept { std::cout << '\n'; }
