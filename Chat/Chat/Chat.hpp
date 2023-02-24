@@ -10,7 +10,7 @@ public:
     void mainMenu();
     void userMenu();
 
-    const bool& getChatGo() const noexcept;
+    const bool getChatGo() const noexcept;
     const std::shared_ptr<User> getCurrentUser() const noexcept;
 private:
     std::vector<User> _listOfUsers;
@@ -19,9 +19,9 @@ private:
     bool _chatGo{ true };
 
     void signUp();
-    const bool& isLogin(const std::string& login) const noexcept;
+    const bool isLogin(const std::string& login) const noexcept;
     void authorization();
-    const bool& isValidLoginPassword(const std::string& login, const std::string& password) noexcept;
+    const bool isValidLoginPassword(const std::string& login, const std::string& password) noexcept;
     void deleteUser() noexcept;
 
     void sendMessage();

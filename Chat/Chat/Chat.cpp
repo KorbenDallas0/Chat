@@ -58,7 +58,7 @@ void Chat::signUp() {
     std::cout << "Здравствуйте " << _currentUser->getName() << ", спасибо за регистрацию.\n";
 }
 
-const bool& Chat::isLogin(const std::string& login) const noexcept {
+const bool Chat::isLogin(const std::string& login) const noexcept {
     for (const auto& user : _listOfUsers) {
         if (user.getLogin() == login) { return true; }
     }
@@ -78,7 +78,7 @@ void Chat::authorization() {
     }
 }
 
-const bool& Chat::isValidLoginPassword(const std::string& login, const std::string& password) noexcept {
+const bool Chat::isValidLoginPassword(const std::string& login, const std::string& password) noexcept {
     for (auto user : _listOfUsers) {
         if (user.getLogin() == login && user.getPassword() == password) {
             _currentUser = std::make_shared<User>(user);
@@ -88,7 +88,7 @@ const bool& Chat::isValidLoginPassword(const std::string& login, const std::stri
     return false;
 }
 
-const bool& Chat::getChatGo() const noexcept {
+const bool Chat::getChatGo() const noexcept {
     return _chatGo;
 }
 
